@@ -1,0 +1,151 @@
+/*  
+	Berkeley Automation Lab
+	Version:June 2006 
+	http://automation.berkeley.edu
+*/
+
+
+/* -- Basic HTML Elements -- */
+
+* {	padding:0; margin:0; }
+
+a {	color:#bfbfbf; }
+a:hover { color: #fff; }
+a img { border:none; }
+p { line-height:1.5em; }
+p img { padding:0; max-width:100%; }
+h1 { color:#ccc; font-size:1.5em; font-weight:normal; margin:1.5em 0; }
+h2, h3 { font-size:1.15em; color:#fff; font-weight:normal; }
+ul li { list-style-type:square; margin:0.5em 0 0.5em 2em; }
+blockquote { margin-left:1em; padding-left:1em; border-left:2px solid #ccc; color:#ccc; }
+
+.alignleft { float:left; }
+.alignright { float:right; }
+.hide { display:none; }
+.clear { clear:both; height:1px; font-size:1px; line-height:1px; }
+.inside { width:80%; min-width:65em; max-width:85em; margin:0 auto; }
+.rule { border-top:1px solid #CCC; height:1px; font-size:1px; line-height:1px; margin:1.5em 0; }
+
+
+/* -- Page Structure -- */
+
+body { background:#1c1c1c; color:#bfbfbf; font-size:11px; font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif; }
+
+#header { background:#272727; border-top:8px solid #000; padding-bottom:20px; }
+#header .edge { border-top:1px solid #3d3d3d; }
+#header .inside { padding:2em 0; }
+#header h2 { font-size:2.25em; margin:0 0.5em 0 0; padding:0 0.5em 0.25em 0; }
+#header h2 a { text-decoration:none; color:#fff; outline:none; }
+
+#content { background:#272727; padding:1px 0 2em 0; color:#ccc; border-bottom:1px solid #969696; }
+#content.onecol .content { float:left; width:50%; }
+#content.onecol .secondary { float:right; width:40%; margin:0 0 0 10%; }
+#content.twocol .col { float:left; width:48%; margin:0 0 0 4%; display:inline; }
+* html #content.twocol .col { margin-left:2%; }
+* html #content.twocol .first, #content.twocol .first { margin:0 0 0 0; }
+
+.col h2, .colbig h2 { font-size:1.3em; color:#fff; font-weight:normal; padding:6px 0; border-top:1px solid #3d3d3d; }
+.col h3 { font-size:1.15em; margin:0 0 1.5em 0; font-weight:normal; color:#ccc; }
+.col h3 a { color:#ccc; text-decoration:none; border-bottom:1px dotted #666; }
+
+ul.topics { list-style-type:square; list-style-color:#bfbfbf; margin:1.5em 0; }
+ul.topics li { line-height: 1.5em; }
+ul.topics .title { text-transform:uppercase; font-weight:bold; color:#bfbfbf; padding-bottom:4px; display:block; }
+
+ul.projects { list-style-type:none; margin:1.5em 0 2em 0; border-top:1px solid #3D3D3D; }
+ul.projects li { list-style-type:none; margin:0; padding:0; border-bottom:1px solid #3D3D3D; display:block; }
+ul.projects .date { color:#858585; padding:0 1.5em 0 0; }
+ul.projects img { padding:4px; margin-top:-5px; margin-right:5px; background:#38382f; border:1px solid #000; display:inline; float:left; }
+ul.projects a { color:#bfbfbf; text-decoration:none; padding:1em 0; display:block; }
+ul.projects a.text { padding:0.5em 0; }
+ul.projects a:hover, ul.projects a:hover .date { color:#fff; }
+ul.projects a:hover img { background:#505046; border:1px solid #000; }
+
+#footer { clear:both; height:1.4em; color:#1c1c1c; margin:0 0 2em 0; }
+#footer .inside { padding:1em 0 .2em 0; }
+#footer p { margin:0; font-size:0.95em; }
+#footer p.tree { float:left; }
+#footer p.foot { float:right; }
+
+
+/* -- Functional Things -- */
+
+#search { float:right; width:200px; text-align:right; background:url(images/search_off.gif) 0 2px no-repeat; }
+#search:hover { background:url(images/search_on.gif) 0 2px no-repeat; }
+#search input { width:175px; font-size:0.95em; background:#626262; border:1px solid #484848; padding:1px; }
+#search input:hover, #search:hover input { background:#ccc; border:1px solid #8c8c8c; }
+#search input:focus { background:#fff; }
+
+ul.people { display:block; margin:2em 0; }
+ul.people li { display:block; margin:.2em; }
+ul.people li span.name { display:block; margin-left:2em; float:left; width:20%; }
+ul.people li span.school { display:block; float:left; width:20%; }
+ul.people li span.dept { display:block; float:left; width:20%; }
+ul.people li span.etc { width: 40%; }
+
+
+/* -- Menu/Ticker -- */
+
+ul#navlist { margin:0; padding:4px 0; white-space:nowrap; border-top:0px dotted #3d3d3d; }
+#navlist li { list-style-type:none; display:inline; margin:0; }
+#navlist a { margin:0; padding:3px 6px; font-size:1.15em; border-right:1px solid #111; outline:none; }
+#navlist a:link, #navlist a:visited { color:#bfbfbf; background-color:#3d3d3d; border-left:1px solid #333; border-bottom:1px solid #111; text-decoration:none; }
+#navlist a:hover { color:#fff; background-color:#555; border-left:1px solid #333; border-bottom:1px solid #fff; text-decoration:none; }
+
+#ticker { background-color:#1c1c1c; width:70px; height:70px; float:left; margin-right:10px; border:1px dotted #a5a5a5; }
+.tickerviewable { width:70px; height:80px; overflow:hidden; position:relative;  }
+.tickerviewable .tickerscroll { position:absolute; width:10000px; }
+.ynsnip {float:left; width:70px; position:relative; font-size:10px; } 
+
+/* Opera Scroll Bar Hack */
+@media all and (min-width:0px){ #ynscrollviewable { overflow:auto; overflow-x:scroll; } } 
+ 
+.tickerControls { padding:0; margin:0 2px 0px; }
+.dots { text-align:left; margin-top:2px; }
+.dots a { display:inline; padding:0px 2px; margin:0 1px; *margin-right:1px; }
+
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { display:inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+/* End hide from IE-mac */
+
+
+/* -- Projects.html -- */
+ul.projmaster { list-style-type:none; margin:0; }
+ul.projmaster li { list-style-type:none; display:block; margin:0; padding:0; }
+ul.projmaster h3 { font-size:1.5em; text-transform:uppercase; }
+ul.projsub { margin:0; padding:0 0 2em 0}
+ul.projsub li { display:block; margin:0 0 0 2em; padding:0 0 .4em 2em; background:url() no-repeat 0 11px; }
+ul.projsub .title { display:block; color:#858585; text-decoration:underline; padding:0 1.5em .5em 0; }
+ul.projsub img { padding:4px; margin-top:-5px; margin-right:5px; background:#38382f; border:1px solid #000; display:inline; float:left; }
+ul.projsub a { display:block; color:#bfbfbf;  padding:1em; border:1px solid #272727; text-decoration:none; }
+ul.projsub a:hover { color:#fff; background-color:#222; padding:1em; border:1px solid #939393; -moz-border-radius: 5px; }
+ul.projsub a:hover .title { text-decoration:none; }
+ul.projsub a:hover img { background:#505046; border:1px solid #000; }
+
+/*-- Project Pages -- */
+.projectpanel h4 { display:block; margin:2em 0 .5em 20%; font-size:1.3em; color:#fff; }
+.projectpanel p { display:block; margin:0 0 1em 20%; }
+.projectpanel img { float:right; height:180px; padding:0 0 15px 10px; }
+div.static { position:fixed; }
+ul.static li { list-style-type:none; display:block; margin:.2em; text-align:center; background-color:#333; }
+ul.static li.dark { background-color:#2d2d2d; }
+ul.static li:hover, ul.static li.dark:hover { background-color:#555; }
+ul.static a { display:block; text-decoration:none; padding:.4em 2em; }
+ul.static a:hover { color:#fff; }
+
+
+/* -- Proj-Form -- */
+.projectpanel2 h4 { display:block; float:left; width:15%; margin:0 5% 2em 0; text-align:right; text-transform:uppercase; font-weight:bold; color:#bfbfbf; }
+.projectpanel2 p { display:block; margin: 0 0 2em 20%; }
+.projectpanel2 img { float:right; height:180px; padding:0 0 15px 10px; }
+ul.topics2 { list-style-type:square; list-style-color:#bfbfbf; margin:1.5em 0; }
+ul.topics2 li { line-height: 1.5em; display:block; }
+
+
+/* -- Proj-Column -- */
+.colbig { float:left; width:75%; }
+.colmini { float:right; width:20%; margin:0 0 0 5%; }
