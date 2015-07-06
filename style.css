@@ -29,7 +29,7 @@ blockquote { margin-left:1em; padding-left:1em; border-left:2px solid #ccc; colo
 
 /* -- Page Structure -- */
 
-body { background:#1c1c1c; color:#bfbfbf; font-size:11px; font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif; }
+body { background:#1c1c1c; color:#bfbfbf; font-size:13px; font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif; }
 
 #header { background:#272727; border-top:8px solid #000; padding-bottom:20px; }
 #header .edge { border-top:1px solid #3d3d3d; }
@@ -54,7 +54,7 @@ ul.topics .title { text-transform:uppercase; font-weight:bold; color:#bfbfbf; pa
 
 ul.projects { list-style-type:none; margin:1.5em 0 2em 0; border-top:1px solid #3D3D3D; }
 ul.projects li { list-style-type:none; margin:0; padding:0; border-bottom:1px solid #3D3D3D; display:block; }
-ul.projects .date { color:#858585; padding:0 1.5em 0 0; }
+ul.projects .date { color: white; /*#858585*/ padding:0 1.5em 0 0; font-weight:bold; font-size:15px; }
 ul.projects img { padding:4px; margin-top:-5px; margin-right:5px; background:#38382f; border:1px solid #000; display:inline; float:left; }
 ul.projects a { color:#bfbfbf; text-decoration:none; padding:1em 0; display:block; }
 ul.projects a.text { padding:0.5em 0; }
